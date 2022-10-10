@@ -47,6 +47,13 @@ class Product
      */
     private $isPublished;
 
+    public function __construct()
+    {
+        $this->createAt = new \DateTimeImmutable();
+        $this->isPublished = false;
+        $this->isDeleted = false;
+    }
+
     /**
      * @ORM\Column(type="boolean")
      */
